@@ -2,9 +2,9 @@
     "strict": true,
     "debug": true,
     "sp": {
-        "entityId": "http://127.0.0.1:8000/metadata",
+        "entityId": "http://staging.union.rpi.edu/metadata",
         "assertionConsumerService": {
-            "url": "http://127.0.0.1:8000/sso/acs",
+            "url": "http://staging.union.rpi.edu/sso/acs",
             "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
         },
         "NameIDFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
