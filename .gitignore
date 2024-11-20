@@ -1,3 +1,6 @@
 venv
 
 __pycache__
+
+saml/certs/sp.crt
+saml/certs/sp.key
