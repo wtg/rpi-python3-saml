@@ -1,0 +1,1 @@
+This repository is for authentication with RPI's SSO (single sign on) environment. More README.md are in the individual folders. 

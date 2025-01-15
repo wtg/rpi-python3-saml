@@ -1,0 +1,40 @@
+{
+    "strict": true,
+    // delete this for production
+    "debug": true,
+    // sp is your application, so change this accordingly
+    "sp": {
+        // sp's metadata, under the /metadata route in this repo
+        "entityId": "https://staging.union.rpi.edu/metadata",
+        // processes the SAML request, under the /acs route in this repo
+        "assertionConsumerService": {
+            "url": "https://staging.union.rpi.edu/acs",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+        },
+        "NameIDFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+        "x509cert": "",
+        "privateKey": ""
+    },
+    "idp": {
+        // rpi shibboleth information
+        "entityId": "https://shib-idp.rpi.edu/idp/shibboleth",
+        "singleSignOnService": {
+            "url": "https://shib.auth.rpi.edu/idp/profile/SAML2/Redirect/SSO",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+        },
+        // where you want the user to go when they logout
+        "singleLogoutService": {
+            "url": "https://staging.union.rpi.edu/",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+        },
+        // copy from https://shib.auth.rpi.edu/idp/shibboleth
+        "x509certMulti": {
+            "signing": [
+                ""
+            ],
+            "encrpytion": [
+                ""
+            ]
+        }
+    }
+}
